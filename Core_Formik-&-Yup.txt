@@ -1,0 +1,23 @@
+1. first we need Formik component from "formik";
+    that component takes 
+           a. initialValues
+           b. validationSchema
+           c. onSubmit  
+           d. renders  the form with helper Prop
+                  
+
+    a. initialValues : are the default values of our form
+    b. validationSchema : all the validation will be define here 
+    c. onSubmit : will trigger when submitting form , its callback provides all the (form_values, helperFunctions) 
+    d. helper Prop : contains data about form state , this can be used with onChange of <Form>
+
+2. second we need Form component from "formik";
+    this form will have a helper Prop contains data about form state 
+    we can use it with onChange event to manage our form 
+
+3. useField() Hook , for inputs
+    we have to control our inputs , for this we can use useField(props) Hook
+    this hook need all the atributes of input and returns const [field, meta] 
+        a. field : holds the input data eg. values
+        b. meta  : holds the input info eg. touched or error 
+    this can be use to show error conditionally
